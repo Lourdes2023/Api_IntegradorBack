@@ -4,10 +4,6 @@ import { dbConnection } from '../database/config';
 import  authRouter from '../routes/auth';
 import  orderRouter from '../routes/orders';
 import issuesRoutes from '../routes/issues';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
 
 export class Server {
       app: Express;
