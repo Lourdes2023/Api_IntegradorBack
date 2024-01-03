@@ -1,4 +1,4 @@
-import express,  { Express, application } from 'express';
+import express,  { Express } from 'express';
 import cors from 'cors';
 import { dbConnection } from '../database/config';
 import  authRouter from '../routes/auth';
