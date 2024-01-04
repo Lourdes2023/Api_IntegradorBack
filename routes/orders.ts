@@ -18,11 +18,8 @@ router.post("/",
     check( "total", "El total es obligatorio" ).not().isEmpty(),
     check( "shippingDetails", "Los detalles de envio son obligatorios" ).not().isEmpty(),
     check( "items", "El array del producto son obligatorios" ).not().isEmpty(),
-    
     recolectarErrores
-
-] ,
-     createOrder);
+] , createOrder);
 
 
 export default router;

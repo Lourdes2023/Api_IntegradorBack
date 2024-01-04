@@ -7,7 +7,8 @@ const validarJWT = async (req: Request, res: Response, next: NextFunction): Prom
    if (!token) {
          res.status(401).json({
          msg: 'No hay token en la petición'
-      });
+      })
+      return;
    }
     try {
        const  claveSecreta = process.env.JWT_SECRET as string;
