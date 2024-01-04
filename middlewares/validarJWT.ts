@@ -3,7 +3,7 @@ import jwt, { JwtPayload } from "jsonwebtoken";
 import Usuario, { IUsuario } from "../models/usuario";
 
 const validarJWT = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-   const token = req.header('x-token') as string;
+   const token = req.headers["x-token"] as string;
    if (!token) {
          res.status(401).json({
          msg: 'No hay token en la petición'
