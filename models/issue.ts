@@ -1,5 +1,4 @@
 import { Model, Schema, Types, model } from "mongoose";
-import { Type } from "typescript";
 
 export interface IIssue {
     title: string;

@@ -3,7 +3,7 @@ import cors from 'cors';
 import { dbConnection } from '../database/config';
 import  authRouter from '../routes/auth';
 import  orderRouter from '../routes/orders';
-import issuesRoutes from '../routes/issues';
+import issueRoutes from '../routes/issues';
 
 export class Server {
       app: Express;
@@ -42,7 +42,7 @@ export class Server {
         routes(): void {
                 this.app.use(this.authPath, authRouter);
                 this.app.use(this.orderPath, orderRouter);
-                this.app.use(this.issuePath, issuesRoutes);
+                this.app.use(this.issuePath, issueRoutes);
         }
 
         listen(): void {

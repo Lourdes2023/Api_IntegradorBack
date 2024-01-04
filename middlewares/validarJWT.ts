@@ -10,7 +10,7 @@ const validarJWT = async (req: Request, res: Response, next: NextFunction): Prom
       });
    }
     try {
-       const  claveSecreta = process.env.SECRETORPRIVATEKEY as string;
+       const  claveSecreta = process.env.JWT_SECRET as string;
        const payload = jwt.verify(token, claveSecreta) as JwtPayload;
        const {id} = payload;
        const usuarioConectado: IUsuario | null = await Usuario.findById(id);
