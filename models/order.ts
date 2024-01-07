@@ -20,7 +20,6 @@ export interface IOrder {
     createdAt: Date;
     user: Types.ObjectId;
     price: number;
-    shippingCost: number;
     items: ITtem[];
     shippingDetails: isShippingDetails;
     status: string;
@@ -42,10 +41,6 @@ const OrderSchema = new Schema<IOrder>({
         type: Number,
          required: true
          },
-    shippingCost: { 
-        type: Number, 
-        required: true
-     },
     items: { 
         type: [
             {
