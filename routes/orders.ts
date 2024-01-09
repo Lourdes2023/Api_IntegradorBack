@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createOrder, getOrdernes } from "../controllers/orders";
+import { createOrder, getOrders } from "../controllers/orders";
 import validarJWT  from "../middlewares/validarJWT";
 import { recolectarErrores } from "../middlewares/recolectarErrores";
 import { isVerified } from "../middlewares/validarVerificacion";
@@ -7,7 +7,7 @@ import { check } from "express-validator";
 
 const router = Router();
 
-router.get("/",[validarJWT, recolectarErrores], getOrdernes);
+router.get("/",[validarJWT, recolectarErrores], getOrders);
 
 router.post("/",
 [

@@ -3,7 +3,7 @@ import Order, {IOrder} from '../models/order';
 import { ObjectId } from 'mongoose';
 
 
-export const getOrdernes  =async (req: Request, res: Response): Promise<void> => {
+export const getOrders  =async (req: Request, res: Response): Promise<void> => {
   const UsuarioId: ObjectId = req.body.usuarioConectado._id;
   const consulta = { user: UsuarioId }; 
 

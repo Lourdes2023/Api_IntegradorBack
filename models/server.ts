@@ -43,9 +43,7 @@ export class Server {
                 this.app.use(this.authPath, authRouter);
                 this.app.use(this.orderPath, orderRouter);
                 this.app.use(this.issuePath, issueRoutes);
-                this.app.get('/docs', (req, res) => {
-                        res.redirect('https://documenter.getpostman.com/view/31585662/2s9YsJBCcT');
-                      });
+               
         }
 
         listen(): void {

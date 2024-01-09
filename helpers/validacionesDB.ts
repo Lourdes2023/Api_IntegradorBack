@@ -5,7 +5,7 @@ export const existEmail = async (email: string):Promise<void> => {
     // Verificar si el correo existe
     const existe: IUsuario | null =   await Usuario.findOne({email});
     if (existe && existe.verified) {
-        throw new Error(`El correo ${email} ya está registrado`);
+        throw new Error(`El correo ${email} ya está registrado y verificado`);
     }
 
     if(existe && !existe.verified ){
