@@ -11,8 +11,8 @@ import { generarJWT } from '../helpers/generar.JWT';
 
 export const  register =async (req: Request, res: Response): Promise<void> => {
 
-      const { nombre, email, password, role,code}: IUsuario = req.body;
-      const usuario = new Usuario({nombre, email, password, role,code});
+      const { nombre, email, password, role}: IUsuario = req.body;
+      const usuario = new Usuario({nombre, email, password, role});
 
       // Encriptar contraseña
       const salt = bcryptjs.genSaltSync();
@@ -32,7 +32,7 @@ export const  register =async (req: Request, res: Response): Promise<void> => {
 
       await sendEmail(email, newCode);
 
-      res.status(201).json({usuario,code: newCode});
+      res.status(201).json({usuario});
 
 }
 
